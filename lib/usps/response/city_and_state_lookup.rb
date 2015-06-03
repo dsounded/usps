@@ -37,6 +37,19 @@ module USPS::Response
       
       hash      
     end
+
+    #Return first city from a Ruby hash
+
+    def get_first_city
+      @data.to_h.first.last[:city]
+	end
+
+	#Return first state from a Ruby hash
+
+	def get_first_state
+      @data.to_h.first.last[:state]
+	end
+
   end
 end
 
